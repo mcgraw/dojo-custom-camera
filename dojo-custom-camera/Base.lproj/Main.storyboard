@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Camera View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="XMCCameraViewController" customModule="dojo_custom_camera" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uwp-cp-R9Q" userLabel="Still Area">
+                                <rect key="frame" x="16" y="20" width="288" height="472"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0xm-1l-qbI" userLabel="Preview Area">
+                                <rect key="frame" x="16" y="20" width="288" height="472"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCW-Q6-ELq">
+                                <rect key="frame" x="16" y="512" width="288" height="36"/>
+                                <color key="backgroundColor" red="0.15294118230000001" green="0.67450982329999998" blue="0.51372551919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Capture">
+                                    <color key="titleColor" red="1" green="0.98223738453431675" blue="0.98084233403494636" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="captureFrame:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="C2M-bC-7TH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UD9-QF-FIE" userLabel="Capture Shadow">
+                                <rect key="frame" x="16" y="548" width="288" height="1"/>
+                                <color key="backgroundColor" red="0.15294118230000001" green="0.67450982329999998" blue="0.51372551919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="IHQ-Pu-0e2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera Status" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0iP-ZS-UyE">
+                                <rect key="frame" x="107" y="245" width="106" height="22"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.074509806930000005" green="0.4313725531" blue="0.74509805439999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="cCW-Q6-ELq" secondAttribute="bottom" constant="20" id="5sV-qu-fhy"/>
+                            <constraint firstItem="uwp-cp-R9Q" firstAttribute="leading" secondItem="0xm-1l-qbI" secondAttribute="leading" id="9mT-VB-F1W"/>
+                            <constraint firstItem="UD9-QF-FIE" firstAttribute="leading" secondItem="cCW-Q6-ELq" secondAttribute="leading" id="9y8-D5-sMS"/>
+                            <constraint firstItem="0iP-ZS-UyE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="uwp-cp-R9Q" secondAttribute="leading" constant="14" id="JH5-h4-zdi"/>
+                            <constraint firstItem="0iP-ZS-UyE" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="uwp-cp-R9Q" secondAttribute="trailing" constant="-14" id="K1a-1e-ocv"/>
+                            <constraint firstItem="UD9-QF-FIE" firstAttribute="bottom" secondItem="cCW-Q6-ELq" secondAttribute="bottom" constant="1" id="Q0G-VS-8v1"/>
+                            <constraint firstItem="uwp-cp-R9Q" firstAttribute="bottom" secondItem="0xm-1l-qbI" secondAttribute="bottom" id="RNd-kr-SSd"/>
+                            <constraint firstItem="0iP-ZS-UyE" firstAttribute="centerY" secondItem="uwp-cp-R9Q" secondAttribute="centerY" id="TTy-ig-bNn"/>
+                            <constraint firstItem="cCW-Q6-ELq" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Vmw-qA-VOr"/>
+                            <constraint firstItem="uwp-cp-R9Q" firstAttribute="trailing" secondItem="0xm-1l-qbI" secondAttribute="trailing" id="YfY-3J-fTP"/>
+                            <constraint firstItem="UD9-QF-FIE" firstAttribute="trailing" secondItem="cCW-Q6-ELq" secondAttribute="trailing" id="gSU-Gd-8Yz"/>
+                            <constraint firstAttribute="centerX" secondItem="cCW-Q6-ELq" secondAttribute="centerX" id="heD-au-RSZ"/>
+                            <constraint firstItem="uwp-cp-R9Q" firstAttribute="top" secondItem="0xm-1l-qbI" secondAttribute="top" id="r3J-wK-XRm"/>
+                            <constraint firstItem="uwp-cp-R9Q" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="rTb-fi-Rdf"/>
+                            <constraint firstItem="cCW-Q6-ELq" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="sbU-4g-M7i"/>
+                            <constraint firstItem="0iP-ZS-UyE" firstAttribute="centerX" secondItem="uwp-cp-R9Q" secondAttribute="centerX" id="uMu-gt-wLP"/>
+                            <constraint firstItem="uwp-cp-R9Q" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="wRP-li-GZf"/>
+                            <constraint firstItem="cCW-Q6-ELq" firstAttribute="top" secondItem="uwp-cp-R9Q" secondAttribute="bottom" constant="20" id="xUL-tL-CxV"/>
+                            <constraint firstItem="uwp-cp-R9Q" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" id="xZa-aQ-8CA"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="cameraCapture" destination="cCW-Q6-ELq" id="7K7-uE-y6a"/>
+                        <outlet property="cameraCaptureShadow" destination="UD9-QF-FIE" id="fvX-aV-nNa"/>
+                        <outlet property="cameraPreview" destination="0xm-1l-qbI" id="pen-AP-9iN"/>
+                        <outlet property="cameraStatus" destination="0iP-ZS-UyE" id="fRe-de-47H"/>
+                        <outlet property="cameraStill" destination="uwp-cp-R9Q" id="frZ-v6-e8G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="169" y="476"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
