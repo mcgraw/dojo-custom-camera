@@ -87,15 +87,21 @@ class XMCCamera: NSObject {
                     }
                 }
                 
-                var error: NSError?
-                imageOutput.captureStillImageAsynchronouslyFromConnection(videoConnection, completionHandler: { (imageSampleBuffer: CMSampleBufferRef!, error) -> Void in
-                    let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageSampleBuffer)
-                    let image: UIImage? = UIImage(data: imageData!)!
-                    
+                if videoConnection != nil {
+                    var error: NSError?
+                    imageOutput.captureStillImageAsynchronouslyFromConnection(videoConnection, completionHandler: { (imageSampleBuffer: CMSampleBufferRef!, error) -> Void in
+                        let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageSampleBuffer)
+                        let image: UIImage? = UIImage(data: imageData!)!
+                        
+                        dispatch_async(dispatch_get_main_queue()) {
+                            completed(image: image)
+                        }
+                    })
+                } else {
                     dispatch_async(dispatch_get_main_queue()) {
-                        completed(image: image)
+                        completed(image: nil)
                     }
-                })
+                }
             })
         } else {
             completed(image: nil)
