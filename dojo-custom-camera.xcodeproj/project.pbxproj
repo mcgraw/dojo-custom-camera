@@ -8,23 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		F0A1C6A91A165A1E00981BC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C6A01A165A1E00981BC3 /* AppDelegate.swift */; };
-		F0A1C6AA1A165A1E00981BC3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0A1C6A11A165A1E00981BC3 /* LaunchScreen.xib */; };
 		F0A1C6AB1A165A1E00981BC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0A1C6A31A165A1E00981BC3 /* Main.storyboard */; };
 		F0A1C6AC1A165A1E00981BC3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0A1C6A51A165A1E00981BC3 /* Images.xcassets */; };
 		F0A1C6AD1A165A1E00981BC3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0A1C6A61A165A1E00981BC3 /* Info.plist */; };
 		F0A1C6AE1A165A1E00981BC3 /* XMCCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C6A71A165A1E00981BC3 /* XMCCamera.swift */; };
 		F0A1C6AF1A165A1E00981BC3 /* XMCCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C6A81A165A1E00981BC3 /* XMCCameraViewController.swift */; };
+		F0C4394C1A181DE100C51EFD /* LaunchScreen_rank_3.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0C4394A1A181DE100C51EFD /* LaunchScreen_rank_3.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F0A1C6761A15377400981BC3 /* dojo-custom-camera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dojo-custom-camera.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0A1C6A01A165A1E00981BC3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F0A1C6A21A165A1E00981BC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F0A1C6A41A165A1E00981BC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F0A1C6A51A165A1E00981BC3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F0A1C6A61A165A1E00981BC3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0A1C6A71A165A1E00981BC3 /* XMCCamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMCCamera.swift; sourceTree = "<group>"; };
 		F0A1C6A81A165A1E00981BC3 /* XMCCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMCCameraViewController.swift; sourceTree = "<group>"; };
+		F0C4394B1A181DE100C51EFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen_rank_3.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				F0A1C6A01A165A1E00981BC3 /* AppDelegate.swift */,
-				F0A1C6A11A165A1E00981BC3 /* LaunchScreen.xib */,
+				F0C4394A1A181DE100C51EFD /* LaunchScreen_rank_3.xib */,
 				F0A1C6A31A165A1E00981BC3 /* Main.storyboard */,
 				F0A1C6A51A165A1E00981BC3 /* Images.xcassets */,
 				F0A1C6A61A165A1E00981BC3 /* Info.plist */,
@@ -125,9 +125,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0C4394C1A181DE100C51EFD /* LaunchScreen_rank_3.xib in Resources */,
 				F0A1C6AD1A165A1E00981BC3 /* Info.plist in Resources */,
 				F0A1C6AC1A165A1E00981BC3 /* Images.xcassets in Resources */,
-				F0A1C6AA1A165A1E00981BC3 /* LaunchScreen.xib in Resources */,
 				F0A1C6AB1A165A1E00981BC3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,20 +148,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F0A1C6A11A165A1E00981BC3 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F0A1C6A21A165A1E00981BC3 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
 		F0A1C6A31A165A1E00981BC3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F0A1C6A41A165A1E00981BC3 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F0C4394A1A181DE100C51EFD /* LaunchScreen_rank_3.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F0C4394B1A181DE100C51EFD /* Base */,
+			);
+			name = LaunchScreen_rank_3.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
