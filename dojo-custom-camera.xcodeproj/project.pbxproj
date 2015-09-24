@@ -94,6 +94,8 @@
 		F0A1C66E1A15377400981BC3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = xmcdojo;
 				TargetAttributes = {
