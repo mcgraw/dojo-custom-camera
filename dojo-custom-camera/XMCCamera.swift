@@ -72,10 +72,10 @@ class XMCCamera: NSObject {
                 
                 var videoConnection: AVCaptureConnection?
                 for connection in imageOutput.connections {
-                    let c = connection as AVCaptureConnection
+                    let c = connection as! AVCaptureConnection
                     
                     for port in c.inputPorts {
-                        let p = port as AVCaptureInputPort
+                        let p = port as! AVCaptureInputPort
                         if p.mediaType == AVMediaTypeVideo {
                             videoConnection = c;
                             break
@@ -88,7 +88,6 @@ class XMCCamera: NSObject {
                 }
                 
                 if videoConnection != nil {
-                    var error: NSError?
                     imageOutput.captureStillImageAsynchronouslyFromConnection(videoConnection, completionHandler: { (imageSampleBuffer: CMSampleBufferRef!, error) -> Void in
                         let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageSampleBuffer)
                         let image: UIImage? = UIImage(data: imageData!)!
@@ -112,14 +111,14 @@ class XMCCamera: NSObject {
     // MARK: Configuration
     
     func addVideoInput() {
-        var error: NSError?
-        var device: AVCaptureDevice = self.deviceWithMediaTypeWithPosition(AVMediaTypeVideo, position: AVCaptureDevicePosition.Back)
-        var input: AVCaptureDeviceInput = AVCaptureDeviceInput.deviceInputWithDevice(device, error: &error) as AVCaptureDeviceInput
-        
-        if error == nil {
+        let device: AVCaptureDevice = self.deviceWithMediaTypeWithPosition(AVMediaTypeVideo, position: AVCaptureDevicePosition.Back)
+        do {
+            let input = try AVCaptureDeviceInput(device: device)
             if self.session.canAddInput(input) {
                 self.session.addInput(input)
             }
+        } catch {
+            print(error)
         }
     }
     
@@ -133,10 +132,10 @@ class XMCCamera: NSObject {
     }
     
     func deviceWithMediaTypeWithPosition(mediaType: NSString, position: AVCaptureDevicePosition) -> AVCaptureDevice {
-        var devices: NSArray = AVCaptureDevice.devicesWithMediaType(mediaType)
-        var captureDevice: AVCaptureDevice = devices.firstObject as AVCaptureDevice
+        let devices: NSArray = AVCaptureDevice.devicesWithMediaType(mediaType as String)
+        var captureDevice: AVCaptureDevice = devices.firstObject as! AVCaptureDevice
         for device in devices {
-            let d = device as AVCaptureDevice
+            let d = device as! AVCaptureDevice
             if d.position == position {
                 captureDevice = d
                 break;
