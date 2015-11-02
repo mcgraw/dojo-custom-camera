@@ -10,7 +10,6 @@
 		F0A1C6A91A165A1E00981BC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C6A01A165A1E00981BC3 /* AppDelegate.swift */; };
 		F0A1C6AB1A165A1E00981BC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0A1C6A31A165A1E00981BC3 /* Main.storyboard */; };
 		F0A1C6AC1A165A1E00981BC3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0A1C6A51A165A1E00981BC3 /* Images.xcassets */; };
-		F0A1C6AD1A165A1E00981BC3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0A1C6A61A165A1E00981BC3 /* Info.plist */; };
 		F0A1C6AE1A165A1E00981BC3 /* XMCCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C6A71A165A1E00981BC3 /* XMCCamera.swift */; };
 		F0A1C6AF1A165A1E00981BC3 /* XMCCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C6A81A165A1E00981BC3 /* XMCCameraViewController.swift */; };
 		F0C4394C1A181DE100C51EFD /* LaunchScreen_rank_3.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0C4394A1A181DE100C51EFD /* LaunchScreen_rank_3.xib */; };
@@ -94,7 +93,9 @@
 		F0A1C66E1A15377400981BC3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = xmcdojo;
 				TargetAttributes = {
 					F0A1C6751A15377400981BC3 = {
@@ -126,7 +127,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0C4394C1A181DE100C51EFD /* LaunchScreen_rank_3.xib in Resources */,
-				F0A1C6AD1A165A1E00981BC3 /* Info.plist in Resources */,
 				F0A1C6AC1A165A1E00981BC3 /* Images.xcassets in Resources */,
 				F0A1C6AB1A165A1E00981BC3 /* Main.storyboard in Resources */,
 			);
@@ -187,6 +187,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -250,6 +251,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/dojo-custom-camera/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.igotit.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "dojo-custom-camera";
 			};
 			name = Debug;
@@ -260,6 +262,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/dojo-custom-camera/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.igotit.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "dojo-custom-camera";
 			};
 			name = Release;

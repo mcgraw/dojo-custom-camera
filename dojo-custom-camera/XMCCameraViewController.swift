@@ -46,7 +46,7 @@ class XMCCameraViewController: UIViewController, XMCCameraDelegate {
         self.preview?.videoGravity = AVLayerVideoGravityResizeAspectFill
         self.preview?.frame = self.cameraPreview.bounds
         self.preview?.cornerRadius = 8.0
-        self.cameraPreview.layer.addSublayer(self.preview)
+        self.cameraPreview.layer.addSublayer(self.preview!)
     }
     
     // MARK: Button Actions
