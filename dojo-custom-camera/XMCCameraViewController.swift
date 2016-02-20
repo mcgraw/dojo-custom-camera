@@ -73,8 +73,12 @@ class XMCCameraViewController: UIViewController, XMCCameraDelegate {
                     self.status = .Error
                 }
                 
-                self.cameraCapture.setTitle("Reset", forState: UIControlState.Normal)
+                //Save Photo to Library
+                self.cameraCapture.setTitle("Save Photo", forState: UIControlState.Normal)
+                UIImageWriteToSavedPhotosAlbum(image!, self,
+                    "image:didFinishSavingWithError:contextInfo:", nil)
             })
+
         } else if self.status == .Still || self.status == .Error {
             UIView.animateWithDuration(0.225, animations: { () -> Void in
                 self.cameraStill.alpha = 0.0;
@@ -111,5 +115,17 @@ class XMCCameraViewController: UIViewController, XMCCameraDelegate {
             self.cameraPreview.alpha = 0.0
         })
     }
+}
+
+
+//When image is saved
+func image(image: UIImage, didFinishSavingWithError
+    error: NSErrorPointer, contextInfo:UnsafePointer<Void>) {
+        
+        if error != nil {
+            // Report error to user
+        }
+        
+        print("Got it!")
 }
 
